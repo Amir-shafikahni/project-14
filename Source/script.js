@@ -49,7 +49,7 @@ function generateNewNote (){
     trashIcon.className = "fa-solid fa-trash-can ms-2";
 
     let NewNoteValue = $.createElement("div");
-    NewNoteValue.className = "card d-flex py-3";
+    NewNoteValue.className = "card d-flex shadow py-3";
     NewNoteValue.style.backgroundColor = inputElem.style.backgroundColor;
     NewNoteValue.innerHTML = inputElem.value;
 
