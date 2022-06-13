@@ -6,9 +6,9 @@ const body = $.body;
 const inputElem = $.querySelector("input");
 const colorCircles = $.querySelectorAll(".colorCircle");
 const notesContainerRow = $.querySelector(".row");
-const emptyBoxAlert = $.querySelector(".emptyBoxAlert");
 const eraserBtn = $.querySelector(".eraserBtn");
 const noteAdderBtn = $.querySelector(".noteAdderBtn");
+const emptyBoxAlert = $.querySelector(".emptyBoxAlert");
 
 // to select the input by pressing enter
 body.addEventListener("keydown", function (event) {
@@ -45,13 +45,13 @@ function generateNewNote (){
     let NewNoteContainer = $.createElement("div");
     NewNoteContainer.className = "col-12 col-md-6 col-lg-4 col-xl-3 mb-2";
 
-    let trashIcon = $.createElement("i");
-    trashIcon.className = "fa-solid fa-trash-can ms-2";
-
     let NewNoteValue = $.createElement("div");
     NewNoteValue.className = "card d-flex shadow py-3";
     NewNoteValue.style.backgroundColor = inputElem.style.backgroundColor;
     NewNoteValue.innerHTML = inputElem.value;
+
+    let trashIcon = $.createElement("i");
+    trashIcon.className = "fa-solid fa-trash-can ms-2";
 
     NewNoteValue.append(trashIcon);
     NewNoteContainer.append(NewNoteValue);
