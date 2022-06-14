@@ -10,8 +10,7 @@ const eraserBtn = $.querySelector(".eraserBtn");
 const noteAdderBtn = $.querySelector(".noteAdderBtn");
 const emptyBoxAlert = $.querySelector(".emptyBoxAlert");
 
-
-function generateNewNote (){
+function generateNewNote() {
   if (inputElem.value.trim()) {
     let NewNoteContainer = $.createElement("div");
     NewNoteContainer.className = "col-12 col-md-6 col-lg-4 col-xl-3 mb-2";
@@ -48,11 +47,10 @@ function generateNewNote (){
   }
 }
 
-
 // to focus on input by enter and Blur by Escape
 body.addEventListener("keydown", function (event) {
-  if(event.key === "Escape"){
-    return inputElem.blur()
+  if (event.key === "Escape") {
+    return inputElem.blur();
   }
   inputElem.focus();
 });
@@ -60,16 +58,16 @@ body.addEventListener("keydown", function (event) {
 // to make new Notes by keyboard and remove them
 inputElem.addEventListener("keydown", function () {
   if (event.key === "Enter") {
-    generateNewNote()
+    generateNewNote();
   }
 });
 
 // to make new Notes by add button and remove them
 noteAdderBtn.addEventListener("click", function () {
-  generateNewNote()
+  generateNewNote();
 });
 
-// to delete input value by button
+// to delete input value by eraser button
 eraserBtn.addEventListener("click", function () {
   inputElem.value = null;
   inputElem.style.backgroundColor = "white";
