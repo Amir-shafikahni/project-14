@@ -49,7 +49,7 @@ function generateNewNote (){
 }
 
 
-// to select the input by pressing enter
+// to focus on input by enter and Blur by Escape
 body.addEventListener("keydown", function (event) {
   if(event.key === "Escape"){
     return inputElem.blur()
