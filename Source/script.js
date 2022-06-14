@@ -51,6 +51,9 @@ function generateNewNote (){
 
 // to select the input by pressing enter
 body.addEventListener("keydown", function (event) {
+  if(event.key === "Escape"){
+    return inputElem.blur()
+  }
   inputElem.focus();
 });
 
