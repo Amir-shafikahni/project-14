@@ -30,12 +30,6 @@ function generateNewNote() {
     inputElem.value = null;
     inputElem.style.backgroundColor = "white";
 
-    const trashIcons = $.querySelectorAll(".fa-trash-can");
-    trashIcons.forEach(function (trashIcon) {
-      trashIcon.addEventListener("click", function () {
-        trashIcon.parentElement.parentElement.remove();
-      });
-    });
   } else {
     inputElem.value = null;
     inputElem.style.backgroundColor = "white";
@@ -46,6 +40,13 @@ function generateNewNote() {
     }, 3000);
   }
 }
+
+// to remove a todo by clicking on its trash icon
+notesContainerRow.addEventListener("click" , function(event){
+  if(event.target.className.includes(" fa-trash-can")){
+    event.target.parentElement.parentElement.remove();
+  }
+})
 
 // to focus on input by enter and Blur by Escape
 body.addEventListener("keydown", function (event) {
